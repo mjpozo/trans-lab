@@ -1,1 +1,37 @@
 /* YeyeYeee código aquí */
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+}
+
+.yellow {
+	color: rgb(244, 181, 0);
+	background-color: rgb(65, 65, 67) !important;
+}
+
+/*----------------------------- HOME ----------------------------------------*/
+.section-home {
+	background: rgb(65, 65, 67);
+	padding-top: 5%;
+	height: 100vh;
+}
+
+.trans {
+	font-size: 160%;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+.btn-login {
+	width: 100%;
+	background: rgb(244, 181, 0);
+}
+
+.footer-home {
+	
+}
