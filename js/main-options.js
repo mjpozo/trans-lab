@@ -22,4 +22,13 @@ $(document).ready(function(){
 	$("#option-saldo").click(function(){
 		$(this).attr('href','index-saldo.html');
 	});
+
+	$(".btn-saldo").click(function(){
+		$(this).attr('href','index-saldo.html');
+	});
+
+	//para redireccionar a la tarifa
+	$("#option-tarifa").click(function(){
+		$(this).attr('href','index-tarifa.html');
+	});
 })

@@ -1,7 +1,9 @@
-
 $(document).ready(function(){
 	//para el menu hamburguesa
 	$(".button-collapse").sideNav();
+
+	//para el select
+	$('select').material_select();
 
 	//para redireccionar a las opciones
 	$("#option-home").click(function(){

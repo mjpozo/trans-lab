@@ -12,7 +12,7 @@
 </head>
 <body>
 
-	<!-- opciones -->
+	<!-- calcular tarifa -->
 	<nav>
 		<div class="nav-wrapper">
 			<a href="#!" class="brand-logo">TRANS-LAB</a>
@@ -28,13 +28,13 @@
 					<a class="option" id="option-saldo"><i class="material-icons left icon-options">attach_money</i> Ver saldo</a>
 				</li>
 				<li>
-					<a class="option" id="option-tarifa"><i class="material-icons left icon-options">apps</i> Calcular tarifa</a>
+					<a href="badges.html" class="option" id="option-tarifa"><i class="material-icons left icon-options">apps</i> Calcular tarifa</a>
 				</li>
 				<li>
 					<a class="option" id="option-perfil"><i class="material-icons left icon-options">person</i> Perfil</a>
 				</li>
 				<li>
-					<a class="option" id="option-frecuentes"><i class="material-icons left icon-options">view_headline</i> Preguntas frecuentes</a>
+					<a href="mobile.html" class="option" id="option-frecuentes"><i class="material-icons left icon-options">view_headline</i> Preguntas frecuentes</a>
 				</li>
 				<li>
 					<a class="option" id="option-home"><i class="material-icons left icon-options">keyboard_backspace</i> Home</a>
@@ -43,32 +43,45 @@
 		</div>
 	</nav>
 
-	<section class="section-options">
-		<div class="container options">
+	<section class="section-saldo">
+		<div class="container saldo">
 			<div class="row">
-				<a class="waves-effect waves-light btn btn-saldo">ver saldo</a>
-				<a class="waves-effect waves-light btn btn-tarifa">calcular tarifa</a>
-				<a class="waves-effect waves-light btn btn-perfil">perfil</a>
-				<a class="waves-effect waves-light btn btn-frecuentes">preguntas frecuentes</a>
+				<form class="col s12">
+					<div class="row">
+						<div class="input-target col s12">
+							<label for="icon_prefix">Número tarjeta</label>
+							<input id="num-target" type="number" class="input-number">
+						</div>
+						<div class="input-field col s6">
+							<select> <!-- esto se tiene que hacer con DOM -->
+								<option value="" disabled selected>Choose your option</option>
+								<option value="1">Option 1</option>
+								<option value="2">Option 2</option>
+								<option value="3">Option 3</option>
+							</select>
+							 <label>Tarifa</label>
+						</div>
+						<div class="input-field col s6">
+							<select> <!-- esto se tiene que hacer con DOM -->
+								<option value="" disabled selected>Choose your option</option>
+								<option value="1">Option 1</option>
+								<option value="2">Option 2</option>
+								<option value="3">Option 3</option>
+							</select>
+							 <label>Tarjeta</label>
+						</div>
+						<div class="input-button col s12">
+							<a class="waves-effect waves-light btn btn-saldo">VER SALDO</a>
+						</div>
+					</div>
+				</form>
 			</div>
 		</div>
 	</section>
 
-	<!-- perfil -->
-
-
-	<!-- preguntas frecuentes -->
-
-
-	<!-- saldo -->
-
-
-	<!-- calcular tarifa -->
-
-
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
-	<script src="js/main-options.js"></script>
+	<script src="js/main-tarifa.js"></script>
 </body>
 </html>
