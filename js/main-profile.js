@@ -12,4 +12,9 @@ $(document).ready(function(){
 	$("#option-perfil").click(function(){
 		$(this).attr('href','index-profile.html');
 	});
+
+	//para redireccionar a las preguntas frecuentes
+	$("#option-frecuentes").click(function(){
+		$(this).attr('href','index-frecuentes.html');
+	});
 })

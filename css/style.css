@@ -15,7 +15,7 @@ body {
 	background-color: rgb(65, 65, 67) !important;
 }
 
-.icon-options {
+.icon-options, .icon-frecuent {
 	color: rgb(244, 181, 0) !important;
 }
 
@@ -75,4 +75,21 @@ body {
 	background: white;
 	width: 90%;
 	margin-left: 5%;
+}
+
+/*------------------------------ PREGUNTAS FRECUENTES ---------------------------*/
+.header-frecuentes {
+	background: rgb(244, 181, 0);
+	padding: 5% 0;
+	color: white;
+}
+
+.section-profile {
+	padding: 5%;
+	background: #dcdddf;
+	height: 68vh;
+}
+
+.collapsible-body {
+	background: whitesmoke;
 }
