@@ -15,6 +15,10 @@ body {
 	background-color: rgb(65, 65, 67) !important;
 }
 
+.icon-options {
+	color: rgb(244, 181, 0) !important;
+}
+
 /*----------------------------- HOME ----------------------------------------*/
 .section-home {
 	background: rgb(65, 65, 67);
@@ -27,11 +31,27 @@ body {
 	font-family: 'Roboto Condensed', sans-serif;
 }
 
-.btn-login {
+.btn {
 	width: 100%;
 	background: rgb(244, 181, 0);
+	margin: 2% 0;
 }
 
 .footer-home {
 	
+}
+
+/*---------------------------- options ----------------------------------------*/
+.nav-wrapper {
+	background: rgb(65, 65, 67);
+	font-size: 80%;
+}
+
+.section-options {
+	background: #dcdddf;
+	height: 91vh;
+}
+
+.container.options {
+	padding-top: 50%;
 }
