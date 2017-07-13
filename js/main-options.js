@@ -17,4 +17,9 @@ $(document).ready(function(){
 	$("#option-frecuentes").click(function(){
 		$(this).attr('href','index-frecuentes.html');
 	});
+
+	//para redireccionar a la consulta de saldo
+	$("#option-saldo").click(function(){
+		$(this).attr('href','index-saldo.html');
+	});
 })

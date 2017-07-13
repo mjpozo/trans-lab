@@ -93,3 +93,10 @@ body {
 .collapsible-body {
 	background: whitesmoke;
 }
+
+/*----------------------------------- consulta saldo ------------------------*/
+.section-saldo {
+	padding: 10% 5%;
+	background: #dcdddf;
+	height: 92vh;
+}
