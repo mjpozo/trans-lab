@@ -55,3 +55,24 @@ body {
 .container.options {
 	padding-top: 50%;
 }
+
+/*---------------------------------- PROFILE ------------------------------------*/
+.header-profile {
+	background: rgb(244, 181, 0);
+}
+
+.section-profile {
+	padding: 5%;
+	background: #dcdddf;
+	height: 57vh;
+}
+
+.container.foto {
+	padding: 5% 0 1% 0;
+}
+
+.cont-mail {
+	background: white;
+	width: 90%;
+	margin-left: 5%;
+}
