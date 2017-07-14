@@ -27,4 +27,14 @@ $(document).ready(function(){
 	$("#option-tarifa").click(function(){
 		$(this).attr('href','index-tarifa.html');
 	});
+
+	//agregamos el correo del usuario en el div contenedor
+	$(".cont-mail").html("te odio");
+
+	//guardamos los números de las tarjetas ingresadas
+	$(".btn-agregar").click(function(){
+		$(".cont-numbers").append('<div class="misTarjetas">' + $("#myTarget").val() + '</div>');
+		document.getElementById("myTarget").value = "";
+	});
+	
 })

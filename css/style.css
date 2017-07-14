@@ -8,6 +8,7 @@
 body {
 	padding: 0;
 	margin: 0;
+	background: #dcdddf;
 }
 
 .yellow {
@@ -82,6 +83,11 @@ body {
 	margin-left: 5%;
 }
 
+.misTarjetas {
+	background: whitesmoke;
+	margin: 1% 0;
+}
+
 /*------------------------------ PREGUNTAS FRECUENTES ---------------------------*/
 .header-frecuentes {
 	background: rgb(244, 181, 0);
@@ -89,7 +95,7 @@ body {
 	color: white;
 }
 
-.section-profile {
+.section-frecuente {
 	padding: 5%;
 	background: #dcdddf;
 	height: 68vh;
