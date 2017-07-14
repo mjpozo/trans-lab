@@ -8,6 +8,9 @@ $(document).ready(function() {
 			var idCorreo = $("#correo-form").val();
 			var idContrasena = $("#pass-form").val();
 
+			//guardamos correo con localStorage
+			localStorage.setItem("email",idCorreo);
+
 			//se agregan toast como alertas
 			if(!(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/).test(idCorreo) && !(/^[0-9].{3,7}$/).test(idContrasena)){
 				Materialize.toast('¡CORREO Y CONTRASEÑA INVÁLIDAS!', 4000);

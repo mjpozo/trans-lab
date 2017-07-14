@@ -29,7 +29,7 @@ $(document).ready(function(){
 	});
 
 	//agregamos el correo del usuario en el div contenedor
-	$(".cont-mail").html("te odio");
+	$(".cont-mail").html(localStorage.getItem("email"));
 
 	//guardamos los números de las tarjetas ingresadas
 	$(".btn-agregar").click(function(){

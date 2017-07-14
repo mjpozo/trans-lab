@@ -25,6 +25,10 @@ body {
 	border: rgb(244, 181, 0) !important;
 }
 
+.blanco {
+	color: whitesmoke;
+}
+
 /*----------------------------- HOME ----------------------------------------*/
 .section-home {
 	background: rgb(65, 65, 67);
@@ -32,8 +36,12 @@ body {
 	height: 100vh;
 }
 
+.row.home {
+	padding-top: 11%;
+}
+
 .trans {
-	font-size: 160%;
+	font-size: 220%;
 	font-family: 'Roboto Condensed', sans-serif;
 }
 
@@ -49,7 +57,6 @@ body {
 }
 
 .footer-home {
-	
 }
 
 /*---------------------------- options ----------------------------------------*/
@@ -113,6 +120,10 @@ body {
 
 .collapsible-body {
 	background: whitesmoke;
+}
+
+.list.active {
+	color: black !important;
 }
 
 /*----------------------------------- consulta saldo ------------------------*/
