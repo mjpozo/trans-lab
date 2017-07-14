@@ -39,7 +39,7 @@ $(document).ready(function(){
 	}*/
 
 	$(".btn-saldo").click(function(){
-		
+
 		var idTargetOne = $("#num-target").val();
 		var idTargetTwo = $("select").val();
 
@@ -54,7 +54,7 @@ $(document).ready(function(){
 		function llamarAjax(idTarget){
 			//hacemos la llamada al ajax
 			$.ajax({
-				url: 'http://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=' + idTarget,
+				url: 'https://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=' + idTarget,
 				type: 'GET',
 				dataType: 'json',
 				//data: {param1: 'value1'},

@@ -53,7 +53,7 @@ $(document).ready(function(){
 
 		function llamarAjax(idTarget){
 			$.ajax({
-				url: 'http://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=' + idTarget,
+				url: 'https://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=' + idTarget,
 				type: 'GET',
 				dataType: 'json',
 				//data: {param1: 'value1'},
