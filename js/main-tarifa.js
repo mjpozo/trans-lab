@@ -40,7 +40,7 @@ $(document).ready(function(){
 
 		//hacemos la llamada al ajax para obtener el saldo
 		var idTargetUno = $("#num-target-rate").val();
-		var idTargetDos = $("select").next().val();
+		var idTargetDos = $("select").eq(1).val();
 		console.log(idTargetDos);
 
 		if (idTargetUno){
