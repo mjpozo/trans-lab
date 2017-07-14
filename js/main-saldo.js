@@ -39,8 +39,10 @@ $(document).ready(function(){
 	}*/
 
 	$(".btn-saldo").click(function(){
+		
 		var idTargetOne = $("#num-target").val();
 		var idTargetTwo = $("select").val();
+
 		if (idTargetOne){
 			llamarAjax(idTargetOne);
 		} else if (idTargetTwo){
