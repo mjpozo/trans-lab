@@ -30,10 +30,28 @@ $(document).ready(function(){
 
 	//agregamos el correo del usuario en el div contenedor
 	$(".cont-mail").html(localStorage.getItem("email"));
+	//window.localStorage.clear();
 
 	//guardamos los números de las tarjetas ingresadas
 	$(".btn-agregar").click(function(){
-		$(".cont-numbers").append('<div class="misTarjetas">' + $("#myTarget").val() + '</div>');
+
+		localStorage.removeItem("email");
+
+		var num = $("#myTarget").val();
+
+		localStorage.setItem("minumber",num);
+
+		var arrNumber = [];
+		var number;
+		for (j=0 ; j<localStorage.length ; j++){
+			number = localStorage.key(j);
+			arrNumber.push(localStorage.getItem(number));
+
+			$(".cont-numbers").append('<div class="misTarjetas">' + arrNumber[j] + '</div>');
+			//document.getElementById("myTarget").value = "";
+		}
+
+		//$(".cont-numbers").append('<div class="misTarjetas">' + $("#myTarget").val() + '</div>');
 		document.getElementById("myTarget").value = "";
 	});
 	
