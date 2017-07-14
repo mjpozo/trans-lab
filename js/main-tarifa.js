@@ -29,4 +29,50 @@ $(document).ready(function(){
 	$("#option-tarifa").click(function(){
 		$(this).attr('href','index-tarifa.html');
 	});
+
+	//para calcular la tarifa final
+	$(".btn-tarifa").click(function(){
+
+		//primero mostramos la tarifa
+		$(".info-rate").empty();
+		$(".info-rate").append('<div><div class="info-title center">COSTO PASAJE</div><div class="info-saldo center"><h4>$' + $("select").val() + '</h4></div></div>');
+
+		//hacemos la llamada al ajax para obtener el saldo
+		var idTarget = $("#num-target-rate").val();
+		$.ajax({
+			url: 'http://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=' + idTarget,
+			type: 'GET',
+			dataType: 'json',
+			//data: {param1: 'value1'},
+		})
+		.done(function(response) {
+			console.log("success");
+			//rescatamos el saldo de la tarjeta, sin . ni $
+			console.log("saldo: " + response.saldoTarjeta.split(""))
+			var miSaldo = "";
+			response.saldoTarjeta.split("").forEach(function(e){
+				if (isNaN(e) == false){
+					miSaldo += e;
+				}
+			});
+			console.log("saldo final: " + miSaldo);
+
+			//ahora mostramos el saldo final
+			var saldoFinal = parseInt(miSaldo) - parseInt($("select").val());
+			$(".saldo-final").empty();
+			$(".saldo-final").append('<div><div class="info-title center">SALDO FINAL</div><div class="info-saldo center"><h4>$' + saldoFinal + '</h4></div></div>');
+			})
+		.fail(function(url) {
+			console.log("error");
+			$(".saldo-final").empty();
+			$(".saldo-final").append('<div><div class="info-title center">COSTO PASAJE</div><div class="info-saldo center"><h4>id de tarjeta inválido</h4></div></div>');
+			
+		})
+		/*.always(function() {
+			console.log("complete");
+		});*/
+
+		document.getElementById("num-target-rate").value = "";
+
+	})
 })

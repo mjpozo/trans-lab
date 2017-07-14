@@ -43,21 +43,21 @@
 		</div>
 	</nav>
 
-	<section class="section-saldo">
-		<div class="container saldo">
+	<section class="section-tarifa">
+		<div class="container tarifa">
 			<div class="row">
 				<form class="col s12">
 					<div class="row">
 						<div class="input-target col s12">
 							<label for="icon_prefix">Número tarjeta</label>
-							<input id="num-target" type="number" class="input-number">
+							<input id="num-target-rate" type="number" class="input-number">
 						</div>
 						<div class="input-field col s6">
 							<select> <!-- esto se tiene que hacer con DOM -->
 								<option value="" disabled selected>Choose your option</option>
-								<option value="1">Option 1</option>
-								<option value="2">Option 2</option>
-								<option value="3">Option 3</option>
+								<option value="740">Horario Alto: $740</option>
+								<option value="680">Horario Medio: $680</option>
+								<option value="640">Horario Bajo: $640</option>
 							</select>
 							 <label>Tarifa</label>
 						</div>
@@ -71,10 +71,20 @@
 							 <label>Tarjeta</label>
 						</div>
 						<div class="input-button col s12">
-							<a class="waves-effect waves-light btn btn-saldo">VER SALDO</a>
+							<a class="waves-effect waves-light btn btn-tarifa">CALCULAR</a>
 						</div>
 					</div>
 				</form>
+			</div>
+			<div class="row">
+				<div class="info-rate">
+					<!-- acá va el costo del pasaje -->
+				</div>
+			</div>
+			<div class="row">
+				<div class="saldo-final">
+					<!-- acá va el saldo final -->
+				</div>
 			</div>
 		</div>
 	</section>

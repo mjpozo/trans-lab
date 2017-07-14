@@ -58,10 +58,10 @@ body {
 	font-size: 80%;
 }
 
-.section-options {
+/*.section-options {
 	background: #dcdddf;
 	height: 91vh;
-}
+}*/
 
 .container.options {
 	padding-top: 50%;
@@ -79,8 +79,8 @@ body {
 
 .section-profile {
 	padding: 5%;
-	background: #dcdddf;
-	height: 57vh;
+	/*background: #dcdddf;
+	height: 57vh;*/
 }
 
 .container.foto {
@@ -106,9 +106,9 @@ body {
 }
 
 .section-frecuente {
-	padding: 5%;
-	background: #dcdddf;
-	height: 68vh;
+	padding: 10% 0;
+	/*background: #dcdddf;
+	height: 68vh;*/
 }
 
 .collapsible-body {
@@ -118,8 +118,8 @@ body {
 /*----------------------------------- consulta saldo ------------------------*/
 .section-saldo {
 	padding: 10% 5%;
-	background: #dcdddf;
-	height: 92vh;
+	/*background: #dcdddf;
+	height: 92vh;*/
 }
 
 .info-title {
@@ -134,4 +134,11 @@ body {
 	color: whitesmoke;
 	padding: 2% 0;
 	margin-top: 0;
+}
+
+/*----------------------------------- tarifa ------------------------*/
+.section-tarifa {
+	padding: 10% 5%;
+	/*background: #dcdddf;
+	height: 92vh;*/
 }
