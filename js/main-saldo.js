@@ -31,30 +31,48 @@ $(document).ready(function(){
 		$(this).attr('href','index-tarifa.html');
 	});
 
+	//creamos el select con DOM*****
+	//NO PUDIMOS UTILIZARLO PORQUE NO PUDIMOS GUARDAR POR LOCAL STORAGE
+	/*$(".select-saldo").append('<select><option value="" disabled selected>Choose your option</option></select>');
+	for (i=0 ; i<arrNumber.length ; i++){
+		$('select').append('<option value="' + i + '">' + arrNumber[i] + '</option>')
+	}*/
+
 	$(".btn-saldo").click(function(){
-		var idTarget = $("#num-target").val();
+		var idTargetOne = $("#num-target").val();
+		var idTargetTwo = $("select").val();
+		if (idTargetOne){
+			llamarAjax(idTargetOne);
+		} else if (idTargetTwo){
+			//bloqueamos el input
+			document.getElementById("num-target").disabled=true;
+			llamarAjax(idTargetTwo);
+		}
 
-		//hacemos la llamada al ajax
-		$.ajax({
-			url: 'http://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=' + idTarget,
-			type: 'GET',
-			dataType: 'json',
-			//data: {param1: 'value1'},
-		})
-		.done(function(response) {
-			console.log("success");
+		function llamarAjax(idTarget){
+			//hacemos la llamada al ajax
+			$.ajax({
+				url: 'http://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=' + idTarget,
+				type: 'GET',
+				dataType: 'json',
+				//data: {param1: 'value1'},
+			})
+			.done(function(response) {
+				console.log("success");
 
-			$(".cont-info-saldo").empty();
-			$(".cont-info-saldo").append('<div><div class="info-title center">SALDO TOTAL</div><div class="info-saldo center"><h3>' + response.saldoTarjeta + '</h3></div></div>');
-		})
-		.fail(function(url) {
-			console.log("error");
-			$(".cont-info-saldo").empty();
-			$(".cont-info-saldo").append('<div><div class="info-title center">SALDO TOTAL</div><div class="info-saldo center"><h4>id de tarjeta inválido</h4></div></div>');
-		})
-		/*.always(function() {
-			console.log("complete");
-		});*/
+				$(".cont-info-saldo").empty();
+				$(".cont-info-saldo").append('<div><div class="info-title center">SALDO TOTAL</div><div class="info-saldo center"><h3>' + response.saldoTarjeta + '</h3></div></div>');
+			})
+			.fail(function(url) {
+				console.log("error");
+				$(".cont-info-saldo").empty();
+				$(".cont-info-saldo").append('<div><div class="info-title center">SALDO TOTAL</div><div class="info-saldo center"><h4>id de tarjeta inválido</h4></div></div>');
+			})
+			/*.always(function() {
+				console.log("complete");
+			});*/
+		}
+		
 		
 		document.getElementById("num-target").value = "";
 
