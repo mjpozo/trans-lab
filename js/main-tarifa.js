@@ -58,10 +58,17 @@ $(document).ready(function(){
 			console.log("saldo final: " + miSaldo);
 
 			//ahora mostramos el saldo final
+
 			var saldoFinal = parseInt(miSaldo) - parseInt($("select").val());
-			$(".saldo-final").empty();
-			$(".saldo-final").append('<div><div class="info-title center">SALDO FINAL</div><div class="info-saldo center"><h4>$' + saldoFinal + '</h4></div></div>');
-			})
+
+			if (isNaN(saldoFinal)){
+				$(".saldo-final").empty();
+				$(".saldo-final").append('<div><div class="info-title center">SALDO FINAL</div><div class="info-saldo center"><h4>Tarjeta sin uso</h4></div></div>');
+			} else {
+				$(".saldo-final").empty();
+				$(".saldo-final").append('<div><div class="info-title center">SALDO FINAL</div><div class="info-saldo center"><h4>$' + saldoFinal + '</h4></div></div>');
+			}
+		})
 		.fail(function(url) {
 			console.log("error");
 			$(".saldo-final").empty();
