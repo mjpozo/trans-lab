@@ -20,6 +20,11 @@ body {
 	color: rgb(244, 181, 0) !important;
 }
 
+.active {
+	color: rgb(244, 181, 0) !important;
+	border: rgb(244, 181, 0) !important;
+}
+
 /*----------------------------- HOME ----------------------------------------*/
 .section-home {
 	background: rgb(65, 65, 67);
@@ -36,6 +41,11 @@ body {
 	width: 100%;
 	background: rgb(244, 181, 0);
 	margin: 2% 0;
+}
+
+.btn:hover {
+	background: whitesmoke;
+	color: rgb(244, 181, 0);
 }
 
 .footer-home {
@@ -110,4 +120,18 @@ body {
 	padding: 10% 5%;
 	background: #dcdddf;
 	height: 92vh;
+}
+
+.info-title {
+	background: rgb(65, 65, 67);
+	color: whitesmoke;
+	padding: 2% 0;
+	margin-bottom: 0;
+}
+
+.info-saldo {
+	background: rgb(244, 181, 0);
+	color: whitesmoke;
+	padding: 2% 0;
+	margin-top: 0;
 }

@@ -30,4 +30,33 @@ $(document).ready(function(){
 	$("#option-tarifa").click(function(){
 		$(this).attr('href','index-tarifa.html');
 	});
+
+	$(".btn-saldo").click(function(){
+		var idTarget = $("#num-target").val();
+
+		//hacemos la llamada al ajax
+		$.ajax({
+			url: 'http://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=' + idTarget,
+			type: 'GET',
+			dataType: 'json',
+			//data: {param1: 'value1'},
+		})
+		.done(function(response) {
+			console.log("success");
+
+			$(".cont-info-saldo").empty();
+			$(".cont-info-saldo").append('<div><div class="info-title center">SALDO TOTAL</div><div class="info-saldo center"><h3>' + response.saldoTarjeta + '</h3></div></div>');
+		})
+		.fail(function(url) {
+			console.log("error");
+			$(".cont-info-saldo").empty();
+			$(".cont-info-saldo").append('<div><div class="info-title center">SALDO TOTAL</div><div class="info-saldo center"><h4>id de tarjeta inválido</h4></div></div>');
+		})
+		/*.always(function() {
+			console.log("complete");
+		});*/
+		
+		document.getElementById("num-target").value = "";
+
+	})
 })
