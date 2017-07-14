@@ -56,6 +56,11 @@ body {
 	padding-top: 50%;
 }
 
+.form-validate {
+	color: whitesmoke;
+}
+
+
 /*---------------------------------- PROFILE ------------------------------------*/
 .header-profile {
 	background: rgb(244, 181, 0);

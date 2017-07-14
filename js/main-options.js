@@ -13,8 +13,16 @@ $(document).ready(function(){
 		$(this).attr('href','index-profile.html');
 	});
 
+	$(".btn-perfil").click(function(){
+		$(this).attr('href','index-profile.html');
+	});
+
 	//para redireccionar a las preguntas frecuentes
 	$("#option-frecuentes").click(function(){
+		$(this).attr('href','index-frecuentes.html');
+	});
+
+	$(".btn-frecuentes").click(function(){
 		$(this).attr('href','index-frecuentes.html');
 	});
 
@@ -29,6 +37,10 @@ $(document).ready(function(){
 
 	//para redireccionar a la tarifa
 	$("#option-tarifa").click(function(){
+		$(this).attr('href','index-tarifa.html');
+	});
+
+	$(".btn-tarifa").click(function(){
 		$(this).attr('href','index-tarifa.html');
 	});
 })
