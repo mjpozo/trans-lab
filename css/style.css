@@ -22,8 +22,14 @@ body {
 
 .active {
 	color: rgb(244, 181, 0) !important;
-	border: rgb(244, 181, 0) !important;
 }
+
+.input-field input[type=email]:focus, 
+.input-field input[type=password]:focus, 
+.input-field input[type=number]:focus {
+     border-bottom: 1px solid rgb(244, 181, 0) !important;
+     box-shadow: 0 1px 0 0 rgb(244, 181, 0) !important;
+   }
 
 .blanco {
 	color: whitesmoke;

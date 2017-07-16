@@ -65,8 +65,7 @@ $(document).ready(function(){
 
 		var newTarget = JSON.parse(localStorage.getItem("number" + arrNumber.indexOf(arrNumber[arrNumber.length-1]).toString()));
 
-			
-		$(".cont-numbers").append('<div class="misTarjetas">' + newTarget[newTarget.length-1] + '</div>');
+		$(".cont-numbers").append('<div class="misTarjetas">' + newTarget + '</div>');
 
 		document.getElementById("myTarget").value = "";
 	});
